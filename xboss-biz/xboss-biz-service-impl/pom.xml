@@ -11,7 +11,7 @@
 
     <artifactId>xboss-biz-service-impl</artifactId>
 
-    <name>xboss-biz-service-impl</name>
+    <name>xboss-biz-service-impl-${project.version}</name>
     <url>http://www.example.com</url>
 
     <properties>

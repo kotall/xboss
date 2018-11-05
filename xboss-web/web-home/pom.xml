@@ -11,7 +11,7 @@
 
     <artifactId>web-home</artifactId>
 
-    <name>web-home</name>
+    <name>web-home-${project.version}</name>
     <url>http://www.example.com</url>
 
     <properties>

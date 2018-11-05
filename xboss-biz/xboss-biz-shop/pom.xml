@@ -11,7 +11,7 @@
 
     <artifactId>xboss-biz-shop</artifactId>
 
-    <name>xboss-biz-shop</name>
+    <name>xboss-biz-shop-${project.version}</name>
     <url>http://www.example.com</url>
 
     <properties>

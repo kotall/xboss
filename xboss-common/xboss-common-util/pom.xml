@@ -11,7 +11,7 @@
 
     <artifactId>xboss-common-util</artifactId>
 
-    <name>xboss-common-util</name>
+    <name>xboss-common-util-${project.version}</name>
     <url>http://www.example.com</url>
 
     <properties>

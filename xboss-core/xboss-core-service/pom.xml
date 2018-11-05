@@ -11,7 +11,7 @@
 
     <artifactId>xboss-core-service</artifactId>
 
-    <name>xboss-core-service</name>
+    <name>xboss-core-service-${project.version}</name>
     <url>http://www.example.com</url>
 
     <properties>

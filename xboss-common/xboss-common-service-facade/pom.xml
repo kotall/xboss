@@ -11,7 +11,7 @@
 
     <artifactId>xboss-common-service-facade</artifactId>
 
-    <name>xboss-common-service-facade</name>
+    <name>xboss-common-service-facade-${project.version}</name>
     <url>http://www.example.com</url>
 
     <properties>

@@ -11,7 +11,7 @@
 
     <artifactId>xboss-common-repository</artifactId>
 
-    <name>xboss-common-repository</name>
+    <name>xboss-common-repository-${project.version}</name>
     <url>http://www.example.com</url>
 
     <properties>

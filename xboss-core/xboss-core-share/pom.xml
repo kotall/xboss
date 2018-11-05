@@ -11,7 +11,7 @@
 
     <artifactId>xboss-core-share</artifactId>
 
-    <name>xboss-core-share</name>
+    <name>xboss-core-share-${project.version}</name>
     <url>http://www.example.com</url>
 
     <properties>

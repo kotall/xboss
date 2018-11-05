@@ -11,7 +11,7 @@
 
     <artifactId>xboss-biz-share</artifactId>
 
-    <name>xboss-biz-share</name>
+    <name>xboss-biz-share-${project.version}</name>
     <url>http://www.example.com</url>
 
     <properties>

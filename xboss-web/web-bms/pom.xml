@@ -11,7 +11,7 @@
 
     <artifactId>web-bms</artifactId>
 
-    <name>web-bms</name>
+    <name>web-bms-${project.version}</name>
     <url>http://www.example.com</url>
 
     <properties>

@@ -11,7 +11,7 @@
 
     <artifactId>xboss-common-integration</artifactId>
 
-    <name>xboss-common-integration</name>
+    <name>xboss-common-integration-${project.version}</name>
     <url>http://www.example.com</url>
 
     <properties>

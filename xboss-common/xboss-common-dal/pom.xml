@@ -11,7 +11,7 @@
 
     <artifactId>xboss-common-dal</artifactId>
 
-    <name>xboss-common-dal</name>
+    <name>xboss-common-dal-${project.version}</name>
     <url>http://www.example.com</url>
 
     <properties>
