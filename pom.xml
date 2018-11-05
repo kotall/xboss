@@ -3,6 +3,13 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
+    <modules>
+        <module>xboss-common</module>
+        <module>xboss-core</module>
+        <module>xboss-biz</module>
+        <module>xboss-web</module>
+        <module>xboss-test</module>
+    </modules>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -13,9 +20,7 @@
     <groupId>com.github.kotall</groupId>
     <artifactId>xboss</artifactId>
     <version>1.0.0-SNAPSHOT</version>
-    <modules>
-        <module>auth-server</module>
-    </modules>
+
     <packaging>pom</packaging>
 
     <name>xboss</name>
@@ -26,6 +31,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>1.8</java.version>
+        <xboss.version>1.0.0-SNAPSHOT</xboss.version>
     </properties>
 
     <dependencyManagement>
@@ -33,6 +39,76 @@
             <dependency>
                 <groupId>org.projectlombok</groupId>
                 <artifactId>lombok</artifactId>
+            </dependency>
+            <dependency>
+                <groupId>com.github.kotall</groupId>
+                <artifactId>xboss-common-dal</artifactId>
+                <version>${xboss.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.github.kotall</groupId>
+                <artifactId>xboss-common-util</artifactId>
+                <version>${xboss.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.github.kotall</groupId>
+                <artifactId>xboss-common-integration</artifactId>
+                <version>${xboss.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.github.kotall</groupId>
+                <artifactId>xboss-common-repository</artifactId>
+                <version>${xboss.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.github.kotall</groupId>
+                <artifactId>xboss-common-service-facade</artifactId>
+                <version>${xboss.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.github.kotall</groupId>
+                <artifactId>xboss-core-share</artifactId>
+                <version>${xboss.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.github.kotall</groupId>
+                <artifactId>xboss-core-model</artifactId>
+                <version>${xboss.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.github.kotall</groupId>
+                <artifactId>xboss-core-service</artifactId>
+                <version>${xboss.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.github.kotall</groupId>
+                <artifactId>xboss-biz-share</artifactId>
+                <version>${xboss.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.github.kotall</groupId>
+                <artifactId>xboss-biz-shop</artifactId>
+                <version>${xboss.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.github.kotall</groupId>
+                <artifactId>xboss-biz-service-impl</artifactId>
+                <version>${xboss.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.github.kotall</groupId>
+                <artifactId>web-home</artifactId>
+                <version>${xboss.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.github.kotall</groupId>
+                <artifactId>web-bms</artifactId>
+                <version>${xboss.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.github.kotall</groupId>
+                <artifactId>xboss-test</artifactId>
+                <version>${xboss.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
