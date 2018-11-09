@@ -9,9 +9,9 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>xboss-biz-service-impl</artifactId>
+    <artifactId>xboss-biz-boss</artifactId>
 
-    <name>xboss-biz-service-impl-${project.version}</name>
+    <name>xboss-biz-boss-${project.version}</name>
     <url>http://www.example.com</url>
 
     <properties>

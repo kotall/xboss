@@ -30,4 +30,8 @@
         </dependency>
     </dependencies>
 
+    <build>
+        <finalName>bms</finalName>
+    </build>
+
 </project>
