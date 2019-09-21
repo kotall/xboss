@@ -5,17 +5,9 @@
     <modelVersion>4.0.0</modelVersion>
     <modules>
         <module>xboss-common</module>
-        <module>xboss-core</module>
-        <module>xboss-biz</module>
-        <module>xboss-web</module>
-        <module>xboss-test</module>
+        <module>xboss-shop</module>
     </modules>
 
-    <parent>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.0.3.RELEASE</version>
-    </parent>
 
     <groupId>com.github.kotall</groupId>
     <artifactId>xboss</artifactId>
@@ -32,100 +24,37 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>1.8</java.version>
         <junit.version>4.12</junit.version>
-        <xboss.version>1.0.0-SNAPSHOT</xboss.version>
+        <xboss-common.version>1.0.0-SNAPSHOT</xboss-common.version>
     </properties>
 
     <dependencyManagement>
         <dependencies>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-parent</artifactId>
+                <version>2.1.8.RELEASE</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
             <dependency>
                 <groupId>org.projectlombok</groupId>
                 <artifactId>lombok</artifactId>
             </dependency>
             <dependency>
                 <groupId>com.github.kotall</groupId>
-                <artifactId>xboss-common-dal</artifactId>
-                <version>${xboss.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.github.kotall</groupId>
-                <artifactId>xboss-common-util</artifactId>
-                <version>${xboss.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.github.kotall</groupId>
-                <artifactId>xboss-common-integration</artifactId>
-                <version>${xboss.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.github.kotall</groupId>
-                <artifactId>xboss-common-repository</artifactId>
-                <version>${xboss.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.github.kotall</groupId>
-                <artifactId>xboss-common-service-facade</artifactId>
-                <version>${xboss.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.github.kotall</groupId>
-                <artifactId>xboss-core-share</artifactId>
-                <version>${xboss.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.github.kotall</groupId>
-                <artifactId>xboss-core-model</artifactId>
-                <version>${xboss.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.github.kotall</groupId>
-                <artifactId>xboss-core-service</artifactId>
-                <version>${xboss.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.github.kotall</groupId>
-                <artifactId>xboss-biz-share</artifactId>
-                <version>${xboss.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.github.kotall</groupId>
-                <artifactId>xboss-biz-shop</artifactId>
-                <version>${xboss.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.github.kotall</groupId>
-                <artifactId>xboss-biz-service-impl</artifactId>
-                <version>${xboss.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.github.kotall</groupId>
-                <artifactId>web-home</artifactId>
-                <version>${xboss.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.github.kotall</groupId>
-                <artifactId>web-bms</artifactId>
-                <version>${xboss.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.github.kotall</groupId>
-                <artifactId>xboss-test</artifactId>
-                <version>${xboss.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>junit</groupId>
-                <artifactId>junit</artifactId>
-                <version>${junit.version}</version>
+                <artifactId>xboss-common</artifactId>
+                <version>${xboss-common.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
 
     <build>
-        <finalName>x-boss</finalName>
+        <finalName>xboss</finalName>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.1</version>
+                <version>3.8.1</version>
                 <configuration>
                     <source>1.8</source>
                     <target>1.8</target>
