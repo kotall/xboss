@@ -85,8 +85,9 @@
                 $.ajax({
                     type: "POST",
                     url: WEB_DOMAIN + "/console/ex",
-                    dataType: "json",
-                    data: url,
+                    dataType: "JSON",
+                    contentType: "application/json;charset=utf-8",
+                    data: JSON.stringify({shortUrl: url}),
                     success: function (res) {
                         console.info(res);
                         //$(".login-form .form-input input[type='text']:nth-child(2)").attr(res.data);

@@ -20,11 +20,11 @@ public class ConsoleController {
 
     @ResponseBody
     @PostMapping("/ex")
-    public HttpResult exchange(@RequestBody String decodeUrl) {
-        System.out.println(decodeUrl);
-        String shortUrl = ShortLinkBuilder.build(decodeUrl);
+    public HttpResult exchange(@RequestBody ShortLinkDTO shortLinkDTO) {
+        System.out.println(shortLinkDTO.getShortUrl());
+        String shortUrl = ShortLinkBuilder.build(shortLinkDTO.getShortUrl());
         // 保存短链接映射
-        this.shortLinkService.saveShortUrl(shortUrl, decodeUrl);
+        this.shortLinkService.saveShortUrl(shortUrl, shortLinkDTO.getShortUrl());
         return new HttpResult(shortUrl);
     }
 }

@@ -23,12 +23,12 @@ public class ShortLinkController {
      */
     @GetMapping("/{shortUrl}")
     public String redirect(@PathVariable("shortUrl") String shortUrl) {
-        System.out.println("短链接 ==>" + shortUrl);
+        System.out.println("短链接 ==> " + shortUrl);
         String originUrl = this.shortLinkService.getOriginUrl(shortUrl);
         if (StringUtils.isEmpty(originUrl)) {
             return "index";
         }
-        System.out.println("原url ==>" + originUrl);
+        System.out.println("原url ==> " + originUrl);
         return "redirect:" + originUrl;
     }
 
