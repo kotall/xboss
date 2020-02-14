@@ -6,6 +6,7 @@
     <modules>
         <module>xboss-common</module>
         <module>xboss-shop</module>
+        <module>xboss-shortlink</module>
     </modules>
 
 
@@ -39,6 +40,12 @@
             <dependency>
                 <groupId>org.projectlombok</groupId>
                 <artifactId>lombok</artifactId>
+                <version>1.18.12</version>
+            </dependency>
+            <dependency>
+                <groupId>com.google.guava</groupId>
+                <artifactId>guava</artifactId>
+                <version>25.1-jre</version>
             </dependency>
             <dependency>
                 <groupId>com.github.kotall</groupId>

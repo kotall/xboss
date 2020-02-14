@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>短网址转换</title>
+    <style>
+        body {
+            margin: 0px;
+            padding: 0px;
+            width: 100%;
+            height: 100%;
+            background: #000000;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+
+        .login-form {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 760px;
+            padding: 60px 40px;
+            background: rgba(255, 255, 255, 1);
+            box-shadow: 0 15px 20px rgba(255, 255, 255, 0.2);
+        }
+
+        .login-form h2 {
+            margin: 0px 0px 40px;
+            padding: 0px;
+            text-align: center;
+        }
+
+        .login-form .form-input {
+            position: relative;
+            margin: 20px 0px;
+        }
+
+        .login-form .form-input input {
+            outline: none;
+            height: 40px;
+            padding: 10px;
+            box-sizing: border-box;
+            width: 100%;
+            border: 1px solid rgba(0, 0, 0, 0.5);
+            background: transparent;
+            font-size: 18px;
+        }
+
+        .login-form .form-input input[type="submit"] {
+            background: #e91e63;
+            color: #ffffff;
+            border: none;
+            cursor: pointer;
+            text-transform: uppercase;
+        }
+
+        .login-form .form-input input[type="submit"]:hover {
+            background: #0090ff;
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="login-form">
+    <h2>短网址转换</h2>
+    <div class="form-input">
+        <input type="text" name="" placeholder="原网址" id="sourceUrl">
+    </div>
+    <div class="form-input">
+        <input type="submit" name="" value="立即转换">
+    </div>
+    <div class="form-input">
+        <input type="text" name="" placeholder="转换后" id="shortUrl">
+    </div>
+</div>
+<script src="jquery.min.js"></script>
+<script>
+    const WEB_DOMAIN = "http://localhost";
+    $(document).ready(function () {
+        $(".login-form .form-input input[type='submit']").bind("click", function () {
+            let url = $("#sourceUrl").val();
+            console.info(url);
+            if (url) {
+                $.ajax({
+                    type: "POST",
+                    url: WEB_DOMAIN + "/console/ex",
+                    dataType: "json",
+                    data: url,
+                    success: function (res) {
+                        console.info(res);
+                        //$(".login-form .form-input input[type='text']:nth-child(2)").attr(res.data);
+                        $("#shortUrl").val(WEB_DOMAIN + "/" + res.data);
+                    },
+                    error: function (err) {
+                        console.info(err);
+                    }
+
+                });
+            }
+        });
+    });
+</script>
+</body>
+</html>
