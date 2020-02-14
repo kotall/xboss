@@ -56,6 +56,7 @@
     </dependencies>
 
     <build>
+        <finalName>shortlink</finalName>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
@@ -63,6 +64,13 @@
                 <configuration>
                     <mainClass>com.github.kotall.shortlink.ShortLinkApp</mainClass>
                 </configuration>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>repackage</goal>
+                        </goals>
+                    </execution>
+                </executions>
             </plugin>
         </plugins>
     </build>
